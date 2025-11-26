@@ -2,11 +2,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-white"
+      className="py-16 md:py-24 bg-white"
     >
-      <div className="container mx-auto px-6 lg:px-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
             {/* Image */}
             <div className="order-2 lg:order-1">
               <img
@@ -18,18 +18,18 @@ const About = () => {
 
             {/* Content */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-6 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-jpm-blue mb-4 md:mb-6 tracking-tight">
                 About us
               </h2>
-              <h3 className="text-2xl md:text-3xl font-medium text-gray-800 mb-8">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-800 mb-6 md:mb-8">
                 Synergy of expertise and dedication
               </h3>
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
                   Our company was founded in 2013 by experts with decades of
                   experience in the fields of accounting and tax consulting.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                   In collaboration with corporate finance experts, Norventure
                   Services has grown into a consulting firm specializing in
                   providing comprehensive accounting and tax consulting, financial
@@ -62,21 +62,21 @@ const About = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-gray-200">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 pt-12 md:pt-16 border-t border-gray-200">
             <div className="text-center">
-              <div className="text-5xl font-semibold text-jpm-blue mb-2">
+              <div className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-2">
                 2013
               </div>
               <div className="text-gray-600 font-medium text-sm">Founded</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-semibold text-jpm-blue mb-2">
+              <div className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-2">
                 10+
               </div>
               <div className="text-gray-600 font-medium text-sm">Years of Excellence</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-semibold text-jpm-blue mb-2">
+              <div className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-2">
                 100+
               </div>
               <div className="text-gray-600 font-medium text-sm">Satisfied Clients</div>

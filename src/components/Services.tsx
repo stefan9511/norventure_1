@@ -15,7 +15,7 @@ const Services = () => {
         <svg
           width="48"
           height="48"
-          className="w-12 h-12"
+          className="w-10 h-10 md:w-12 md:h-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -41,7 +41,7 @@ const Services = () => {
         <svg
           width="48"
           height="48"
-          className="w-12 h-12"
+          className="w-10 h-10 md:w-12 md:h-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -67,7 +67,7 @@ const Services = () => {
         <svg
           width="48"
           height="48"
-          className="w-12 h-12"
+          className="w-10 h-10 md:w-12 md:h-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -93,7 +93,7 @@ const Services = () => {
         <svg
           width="48"
           height="48"
-          className="w-12 h-12"
+          className="w-10 h-10 md:w-12 md:h-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -119,7 +119,7 @@ const Services = () => {
         <svg
           width="48"
           height="48"
-          className="w-12 h-12"
+          className="w-10 h-10 md:w-12 md:h-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -139,56 +139,56 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-24 bg-white"
+      className="py-16 md:py-24 bg-white"
     >
-      <div className="container mx-auto px-6 lg:px-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
         {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-4 tracking-tight">
+        <div className="mb-12 md:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-jpm-blue mb-3 md:mb-4 tracking-tight">
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             We help our clients unlock growth by focusing on five key solution areas
           </p>
         </div>
 
         {/* Main Content - Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Left Side - Service Tabs */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4 order-2 lg:order-1">
             {services.map((service, index) => (
               <button
                 key={index}
                 onClick={() => setActiveService(index)}
-                className={`w-full text-left p-6 rounded-sm border-2 transition-all duration-300 ${
+                className={`w-full text-left p-4 md:p-6 rounded-sm border-2 transition-all duration-300 ${
                   activeService === index
                     ? 'border-jpm-blue bg-jpm-light shadow-md'
                     : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm'
                 }`}
               >
-                <div className="flex items-start space-x-4">
-                  <div className={`flex-shrink-0 p-3 rounded-sm ${
+                <div className="flex items-start space-x-3 md:space-x-4">
+                  <div className={`flex-shrink-0 p-2 md:p-3 rounded-sm ${
                     activeService === index ? 'bg-jpm-blue text-white' : 'bg-jpm-light text-jpm-blue'
                   } transition-colors`}>
                     {service.icon}
                   </div>
-                  <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`text-lg md:text-xl font-semibold mb-1 md:mb-2 ${
                       activeService === index ? 'text-jpm-blue' : 'text-gray-800'
                     }`}>
                       {service.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed ${
+                    <p className={`text-xs md:text-sm leading-relaxed ${
                       activeService === index ? 'text-gray-700' : 'text-gray-600'
                     }`}>
                       {service.description}
                     </p>
                     {activeService === index && (
-                      <div className="mt-4 flex flex-wrap gap-2">
+                      <div className="mt-3 md:mt-4 flex flex-wrap gap-2">
                         {service.features.map((feature, idx) => (
                           <span
                             key={idx}
-                            className="inline-block px-3 py-1 bg-jpm-blue text-white text-xs font-medium rounded-sm"
+                            className="inline-block px-2 md:px-3 py-1 bg-jpm-blue text-white text-xs font-medium rounded-sm"
                           >
                             {feature}
                           </span>
@@ -200,7 +200,7 @@ const Services = () => {
                     <svg
                       width="24"
                       height="24"
-                      className="w-6 h-6 text-jpm-blue flex-shrink-0 mt-1"
+                      className="w-5 h-5 md:w-6 md:h-6 text-jpm-blue flex-shrink-0 mt-1 hidden sm:block"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -219,38 +219,38 @@ const Services = () => {
           </div>
 
           {/* Right Side - Large Visual */}
-          <div className="sticky top-24">
+          <div className="sticky top-20 md:top-24 order-1 lg:order-2 mb-8 lg:mb-0">
             <div className="relative rounded-sm overflow-hidden shadow-2xl">
               <img
                 src={services[activeService].image}
                 alt={services[activeService].title}
-                className="w-full h-[600px] object-cover transition-opacity duration-500"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transition-opacity duration-500"
                 key={activeService}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-jpm-blue/90 via-jpm-blue/50 to-transparent"></div>
               
               {/* Overlay Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                <div className="mb-6">
-                  <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-sm mb-4">
-                    <span className="text-sm font-medium">Service {activeService + 1} of {services.length}</span>
+              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-6 lg:p-8 text-white">
+                <div className="mb-4 md:mb-6">
+                  <div className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-sm mb-3 md:mb-4">
+                    <span className="text-xs md:text-sm font-medium">Service {activeService + 1} of {services.length}</span>
                   </div>
-                  <h3 className="text-3xl font-semibold mb-4">
+                  <h3 className="text-2xl md:text-3xl font-semibold mb-3 md:mb-4">
                     {services[activeService].title}
                   </h3>
-                  <p className="text-gray-100 leading-relaxed mb-6">
+                  <p className="text-sm md:text-base text-gray-100 leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
                     {services[activeService].longDescription}
                   </p>
                 </div>
                 
                 {/* Feature List */}
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-4 md:mb-6">
                   {services[activeService].features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <svg
                         width="20"
                         height="20"
-                        className="w-5 h-5 text-jpm-accent flex-shrink-0"
+                        className="w-4 h-4 md:w-5 md:h-5 text-jpm-accent flex-shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -262,14 +262,14 @@ const Services = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-sm text-gray-100">{feature}</span>
+                      <span className="text-xs md:text-sm text-gray-100">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center bg-white text-jpm-blue px-6 py-3 rounded-sm font-medium hover:bg-opacity-90 transition-all text-sm w-fit"
+                  className="inline-flex items-center bg-white text-jpm-blue px-4 md:px-6 py-2.5 md:py-3 rounded-sm font-medium hover:bg-opacity-90 transition-all text-xs md:text-sm w-fit"
                 >
                   Get Started
                   <svg
@@ -292,7 +292,7 @@ const Services = () => {
             </div>
 
             {/* Service Indicators */}
-            <div className="flex justify-center space-x-2 mt-6">
+            <div className="flex justify-center space-x-2 mt-4 md:mt-6">
               {services.map((_, index) => (
                 <button
                   key={index}

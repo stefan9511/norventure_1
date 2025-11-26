@@ -2,34 +2,34 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-white"
+      className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24 bg-white"
     >
-      <div className="container mx-auto px-6 lg:px-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-jpm-light text-jpm-blue text-sm font-medium rounded-sm mb-6">
+            <div className="mb-4 md:mb-6">
+              <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 bg-jpm-light text-jpm-blue text-xs md:text-sm font-medium rounded-sm mb-4 md:mb-6">
                 Trusted Since 2013
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-jpm-blue leading-tight mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-jpm-blue leading-tight mb-4 md:mb-6 tracking-tight">
               We speak in numbers
               <br />
               <span className="text-jpm-accent">you can understand</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-6 md:mb-8 max-w-xl">
               For more than a decade, Norventure Services has championed the essential role of accounting and tax consulting in helping businesses grow and succeed.
             </p>
 
             {/* Key Points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-10">
               <div className="flex items-start space-x-3">
                 <div className="flex-shrink-0 mt-1">
                   <svg
                     width="24"
                     height="24"
-                    className="w-6 h-6 text-jpm-accent"
+                    className="w-5 h-5 md:w-6 md:h-6 text-jpm-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -43,8 +43,8 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-jpm-blue mb-1">Expert Team</h3>
-                  <p className="text-sm text-gray-600">Decades of combined experience</p>
+                  <h3 className="font-semibold text-sm md:text-base text-jpm-blue mb-1">Expert Team</h3>
+                  <p className="text-xs md:text-sm text-gray-600">Decades of combined experience</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -52,7 +52,7 @@ const Hero = () => {
                   <svg
                     width="24"
                     height="24"
-                    className="w-6 h-6 text-jpm-accent"
+                    className="w-5 h-5 md:w-6 md:h-6 text-jpm-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -66,8 +66,8 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-jpm-blue mb-1">Comprehensive Services</h3>
-                  <p className="text-sm text-gray-600">Full accounting & tax solutions</p>
+                  <h3 className="font-semibold text-sm md:text-base text-jpm-blue mb-1">Comprehensive Services</h3>
+                  <p className="text-xs md:text-sm text-gray-600">Full accounting & tax solutions</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -75,7 +75,7 @@ const Hero = () => {
                   <svg
                     width="24"
                     height="24"
-                    className="w-6 h-6 text-jpm-accent"
+                    className="w-5 h-5 md:w-6 md:h-6 text-jpm-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -89,8 +89,8 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-jpm-blue mb-1">100+ Clients</h3>
-                  <p className="text-sm text-gray-600">Trusted by businesses</p>
+                  <h3 className="font-semibold text-sm md:text-base text-jpm-blue mb-1">100+ Clients</h3>
+                  <p className="text-xs md:text-sm text-gray-600">Trusted by businesses</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -98,7 +98,7 @@ const Hero = () => {
                   <svg
                     width="24"
                     height="24"
-                    className="w-6 h-6 text-jpm-accent"
+                    className="w-5 h-5 md:w-6 md:h-6 text-jpm-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -112,17 +112,17 @@ const Hero = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-jpm-blue mb-1">10+ Years</h3>
-                  <p className="text-sm text-gray-600">Proven track record</p>
+                  <h3 className="font-semibold text-sm md:text-base text-jpm-blue mb-1">10+ Years</h3>
+                  <p className="text-xs md:text-sm text-gray-600">Proven track record</p>
                 </div>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="#services"
-                className="bg-jpm-blue text-white px-8 py-3.5 rounded-sm font-medium hover:bg-opacity-90 transition-all inline-flex items-center justify-center text-sm shadow-sm"
+                className="bg-jpm-blue text-white px-6 md:px-8 py-3 md:py-3.5 rounded-sm font-medium hover:bg-opacity-90 transition-all inline-flex items-center justify-center text-sm shadow-sm"
               >
                 Explore Our Services
                 <svg
@@ -143,7 +143,7 @@ const Hero = () => {
               </a>
               <a
                 href="#contact"
-                className="bg-transparent border border-gray-300 text-jpm-blue px-8 py-3.5 rounded-sm font-medium hover:bg-jpm-light transition-all inline-flex items-center justify-center text-sm"
+                className="bg-transparent border border-gray-300 text-jpm-blue px-6 md:px-8 py-3 md:py-3.5 rounded-sm font-medium hover:bg-jpm-light transition-all inline-flex items-center justify-center text-sm"
               >
                 Get in Touch
               </a>
@@ -158,19 +158,19 @@ const Hero = () => {
                 <img
                   src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=1000&fit=crop&q=80"
                   alt="Professional accounting and finance services"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[400px] sm:h-[500px] md:h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-jpm-blue/20 to-transparent"></div>
               </div>
 
               {/* Floating Stats Card */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-sm shadow-xl border border-gray-100 hidden lg:block">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-jpm-light p-4 rounded-sm">
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-4 md:p-6 rounded-sm shadow-xl border border-gray-100 hidden sm:block">
+                <div className="flex items-center space-x-3 md:space-x-4">
+                  <div className="bg-jpm-light p-3 md:p-4 rounded-sm">
                     <svg
                       width="32"
                       height="32"
-                      className="w-8 h-8 text-jpm-blue"
+                      className="w-6 h-6 md:w-8 md:h-8 text-jpm-blue"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -184,16 +184,16 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-3xl font-semibold text-jpm-blue">100+</div>
-                    <div className="text-sm text-gray-600">Satisfied Clients</div>
+                    <div className="text-2xl md:text-3xl font-semibold text-jpm-blue">100+</div>
+                    <div className="text-xs md:text-sm text-gray-600">Satisfied Clients</div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute top-6 -right-6 bg-jpm-accent text-white p-4 rounded-sm shadow-lg hidden lg:block">
+              <div className="absolute top-4 -right-4 md:top-6 md:-right-6 bg-jpm-accent text-white p-3 md:p-4 rounded-sm shadow-lg hidden sm:block">
                 <div className="text-center">
-                  <div className="text-2xl font-bold">10+</div>
+                  <div className="text-xl md:text-2xl font-bold">10+</div>
                   <div className="text-xs font-medium">Years Experience</div>
                 </div>
               </div>
@@ -203,9 +203,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 transform -translate-x-1/2 z-10">
         <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-jpm-blue transition-colors">
-          <span className="text-xs mb-2 font-medium">Scroll</span>
+          <span className="text-xs mb-2 font-medium hidden sm:block">Scroll</span>
           <svg
             width="20"
             height="20"

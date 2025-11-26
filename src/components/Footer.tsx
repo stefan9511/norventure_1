@@ -16,13 +16,13 @@ const Footer = () => {
   ]
 
   return (
-    <footer id="contact" className="bg-jpm-dark text-white py-16">
-      <div className="container mx-auto px-6 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer id="contact" className="bg-jpm-dark text-white py-12 md:py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Norventure Services</h3>
-            <p className="text-gray-400 leading-relaxed mb-6 text-sm">
+            <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Norventure Services</h3>
+            <p className="text-gray-400 leading-relaxed mb-5 md:mb-6 text-sm">
               Providing comprehensive accounting and tax consulting services
               since 2013.
             </p>
@@ -47,7 +47,7 @@ const Footer = () => {
 
           {/* Our Services */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Our services</h4>
+            <h4 className="text-sm font-semibold mb-3 md:mb-4 uppercase tracking-wide">Our services</h4>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
@@ -64,7 +64,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Menu</h4>
+            <h4 className="text-sm font-semibold mb-3 md:mb-4 uppercase tracking-wide">Menu</h4>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-semibold mb-4 uppercase tracking-wide">Contact</h4>
+            <h4 className="text-sm font-semibold mb-3 md:mb-4 uppercase tracking-wide">Contact</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li className="flex items-start">
                 <svg
@@ -105,7 +105,7 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>Beogradska 51, Belgrade</span>
+                <span className="break-words">Beogradska 51, Belgrade</span>
               </li>
               <li className="flex items-center">
                 <svg
@@ -125,7 +125,7 @@ const Footer = () => {
                 </svg>
                 <a
                   href="mailto:info@norventureservices.rs"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white transition-colors break-all"
                 >
                   info@norventureservices.rs
                 </a>
@@ -158,12 +158,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8 mt-8">
+        <div className="border-t border-gray-700 pt-6 md:pt-8 mt-6 md:mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0 text-center md:text-left">
               © 2024 Norventure Services. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"

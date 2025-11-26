@@ -20,15 +20,15 @@ const Header = ({ isScrolled }: HeaderProps) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white shadow-sm py-3'
-          : 'bg-white py-4'
+          ? 'bg-white shadow-sm py-2 md:py-3'
+          : 'bg-white py-3 md:py-4'
       }`}
     >
-      <nav className="container mx-auto px-6 lg:px-16">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="text-xl font-semibold text-jpm-blue tracking-tight">
+            <a href="#" className="text-lg sm:text-xl font-semibold text-jpm-blue tracking-tight">
               Norventure Services
             </a>
           </div>
@@ -100,8 +100,9 @@ const Header = ({ isScrolled }: HeaderProps) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-800"
+            className="lg:hidden text-gray-800 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <svg
               width="24"
@@ -132,24 +133,24 @@ const Header = ({ isScrolled }: HeaderProps) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 animate-in slide-in-from-top">
             <a
               href="#home"
-              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm"
+              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </a>
             <a
               href="#about"
-              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm"
+              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About us
             </a>
             <div className="py-3">
               <button
-                className="text-gray-800 hover:text-jpm-blue flex items-center text-sm"
+                className="text-gray-800 hover:text-jpm-blue flex items-center text-sm font-medium w-full"
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 International services
@@ -178,7 +179,10 @@ const Header = ({ isScrolled }: HeaderProps) => {
                       key={index}
                       href={`#services`}
                       className="block py-2 text-gray-600 hover:text-jpm-blue text-sm"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+                        setIsMenuOpen(false)
+                        setIsServicesOpen(false)
+                      }}
                     >
                       {service}
                     </a>
@@ -188,14 +192,14 @@ const Header = ({ isScrolled }: HeaderProps) => {
             </div>
             <a
               href="#careers"
-              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm"
+              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Careers
             </a>
             <a
               href="#contact"
-              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm"
+              className="block py-3 text-gray-800 hover:text-jpm-blue text-sm font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

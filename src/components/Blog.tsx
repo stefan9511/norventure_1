@@ -24,18 +24,18 @@ const Blog = () => {
   ]
 
   return (
-    <section id="blog" className="py-24 bg-white">
-      <div className="container mx-auto px-6 lg:px-16">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-jpm-blue mb-4 tracking-tight">
+    <section id="blog" className="py-16 md:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="mb-12 md:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-jpm-blue mb-3 md:mb-4 tracking-tight">
             Blog stories
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl">
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Everything from financial tips to industry insights
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {blogPosts.map((post, index) => (
             <article
               key={index}
@@ -48,11 +48,11 @@ const Blog = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-5 md:p-6">
                 <span className="text-xs text-jpm-accent font-semibold uppercase tracking-wide">
                   {post.category}
                 </span>
-                <h3 className="text-xl font-semibold text-jpm-blue mt-3 mb-3">
+                <h3 className="text-lg md:text-xl font-semibold text-jpm-blue mt-3 mb-3">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4 text-sm">
